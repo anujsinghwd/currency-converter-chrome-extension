@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 1px;
+      background: darkcyan;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: 0px;
+      text-align: center;
+      font-family: arial;
+    }
+
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+
+    .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 12px;
+    }
+
+    .card button:hover {
+      opacity: 0.7;
+    }
+
+    .loader {
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid red;
+      border-bottom: 5px solid green;
+      width: 30px;
+      height: 30px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+      position: absolute;
+      margin: 79px;
+      display: none;
+    }
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #error {
+      color: red;
+      text-align: center;
+      position: absolute;
+    }
+
+    #result {
+      text-align: center;
+      color: black;
+      font-size: medium;
+    }
+
+    input {
+      border: 1px solid transparent;
+      background-color: #f1f1f1;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input[type=text] {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 style="text-align:center;color:black;">Currency Converter</h2>
+  <hr />
+  <div id="error"></div>
+  <div class="card">
+    <img src="img/logo.png" alt="Denim Jeans" style="width:100%">
+    <div class="loader" id="loader"></div>
+    <p>
+      <input type="text" placeholder="to...eg.USD" id="to" />
+    </p>
+    <p>
+      <input type="text" placeholder="from...eg.INR" id="from" />
+    </p>
+    <p><button id="convert">Convert</button></p>
+  </div>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+  <script src="axios.js"></script>
+</body>
+
+</html>

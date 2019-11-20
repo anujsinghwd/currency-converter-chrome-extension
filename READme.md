@@ -5,5 +5,6 @@
 - Open Chrome Extension Settings
 - Enable Developer mode
 - Load Unpacked
+    - Select the clone repository folder
 - Open `https://developer.chrome.com/`
 - Now your extension is loaded and showing in extension bar

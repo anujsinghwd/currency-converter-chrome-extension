@@ -2,7 +2,7 @@
   "name": "Currency Converter",
   "version": "1.0",
   "description": "currency converter is a simple and lightweight Extension for current rates",
-  "permissions": ["declarativeContent","storage","activeTab"],
+  "permissions": ["activeTab","declarativeContent"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false

@@ -3,9 +3,6 @@ let convert = document.getElementById('convert');
 let error = document.getElementById('error');
 let result = document.getElementById('result');
 
-chrome.storage.sync.get('color', function (data) {
-    // TODO
-});
 
 convert.onclick = function (element) {
     error.innerText = null;

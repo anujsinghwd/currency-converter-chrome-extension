@@ -14,14 +14,14 @@ convert.onclick = function (element) {
         loader.style.display = "block";
         axios.get(`https://dry-cove-37966.herokuapp.com/?to=${to_currency.trim().toUpperCase()}&from=${from_currency.trim().toUpperCase()}&amt=${api_amt}`)
         .then((res) => {
-            alert('hi');return false;
+            // alert('hi');return false;
             loader.style.display = "none";
             let total_converted_res = '';
             let converted_res = '<p> 1 '+res.data.unit_converted_data.base+' = '+res.data.unit_converted_data.numeric+' '+res.data.unit_converted_data.currency+'</p>';
             if(api_amt > 1){
                 let base = res.data.unit_converted_data.base;
                 let inverC = res.data.unit_converted_data.currency;
-                total_converted_res  += '<br/><p>'+api_amt +' '+base+' = '+res.data.total.inverC.numeric+' '+res.data.total.inverC.currency+'</p>';
+                total_converted_res = '<p>'+api_amt +' '+base+' = '+(res.data.unit_converted_data.numeric * amt)+' '+res.data.unit_converted_data.currency+'</p>';
             }
             result.innerHTML = converted_res+total_converted_res;
         })

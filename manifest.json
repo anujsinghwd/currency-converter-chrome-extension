@@ -1,6 +1,6 @@
 {
   "name": "Currency Converter",
-  "version": "1.0",
+  "version": "1.2",
   "description": "currency converter is a simple and lightweight Extension for current rates",
   "permissions": ["activeTab","declarativeContent"],
   "background": {

@@ -13,6 +13,9 @@ chrome.runtime.onInstalled.addListener(function () {
         }),
         new chrome.declarativeContent.PageStateMatcher({
           pageUrl: { hostContains: '/' },
+        }),
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: { hostContains: ':' },
         })
       ],
       actions: [new chrome.declarativeContent.ShowPageAction()]
